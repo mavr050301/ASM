@@ -439,6 +439,13 @@ jmp exit
 
 divv: 
 xor dx,dx
+cmp num2,0
+jne con 
+lea dx, overflow
+mov ah, 09h   
+int 21h
+jmp exit
+con:
 mov ax, num1 
 cmp num1,32767
 jae convert 
