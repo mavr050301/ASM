@@ -128,9 +128,7 @@ print_read_file_error:
     int 21h
     jmp exit   
 
-empty_cmd:
-  ;  mov ax,@data
-  ;  mov ds,ax 
+empty_cmd: 
     lea dx,empty_cmd_mes
     mov ah,9h
     int 21h 
